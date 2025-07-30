@@ -34,7 +34,7 @@ export default function Login() {
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-green-50 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full p-8 bg-white rounded-xl shadow-lg border border-gray-100 space-y-8 animate-fade-in">
         <div className="text-center">
-          <h2 className="text-4xl font-extrabold text-gray-800 mb-2">WellNest</h2>
+          <h2 className="text-4xl font-extrabold text-indigo-700 mb-2">WellNest</h2>
           <p className="text-lg text-gray-600">Sign in to your account</p>
         </div>
 

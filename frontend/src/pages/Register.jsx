@@ -42,7 +42,7 @@ export default function Register() {
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-green-50 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full p-8 bg-white rounded-xl shadow-lg border border-gray-100 space-y-8 animate-fade-in">
         <div className="text-center">
-          <h2 className="text-4xl font-extrabold text-gray-800 mb-2">WellNest</h2>
+          <h2 className="text-4xl font-extrabold text-indigo-700 mb-2">WellNest</h2>
           <p className="text-lg text-gray-600">Create your new account</p>
         </div>
 
@@ -55,7 +55,7 @@ export default function Register() {
             </label>
             <div className="relative">
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                <User className="h-5 w-5 text-green-400" /> {/* Changed icon color slightly for register */}
+                <User className="h-5 w-5 text-blue-400" /> {/* Changed icon color slightly for register */}
               </div>
               <input
                 id="name"
@@ -65,7 +65,7 @@ export default function Register() {
                 required
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                className="pl-10 block w-full px-3 py-2 border border-gray-200 rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-300 focus:border-transparent transition duration-200 sm:text-base"
+                className="pl-10 block w-full px-3 py-2 border border-gray-200 rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:border-transparent transition duration-200 sm:text-base"
                 placeholder="Email address"
               />
             </div>
@@ -77,7 +77,7 @@ export default function Register() {
             </label>
             <div className="relative">
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                <Mail className="h-5 w-5 text-green-400" /> {/* Changed icon color slightly for register */}
+                <Mail className="h-5 w-5 text-blue-400" /> {/* Changed icon color slightly for register */}
               </div>
               <input
                 id="email"
@@ -87,7 +87,7 @@ export default function Register() {
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="pl-10 block w-full px-3 py-2 border border-gray-200 rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-300 focus:border-transparent transition duration-200 sm:text-base"
+                className="pl-10 block w-full px-3 py-2 border border-gray-200 rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:border-transparent transition duration-200 sm:text-base"
                 placeholder="Email address"
               />
             </div>
@@ -100,7 +100,7 @@ export default function Register() {
             </label>
             <div className="relative">
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                <Lock className="h-5 w-5 text-green-400" />
+                <Lock className="h-5 w-5 text-blue-400" />
               </div>
               <input
                 id="password"
@@ -110,7 +110,7 @@ export default function Register() {
                 required
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="pl-10 block w-full px-3 py-2 border border-gray-200 rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-300 focus:border-transparent transition duration-200 sm:text-base"
+                className="pl-10 block w-full px-3 py-2 border border-gray-200 rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:border-transparent transition duration-200 sm:text-base"
                 placeholder="Password"
               />
             </div>
@@ -123,7 +123,7 @@ export default function Register() {
             </label>
             <div className="relative">
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                <Lock className="h-5 w-5 text-green-400" />
+                <Lock className="h-5 w-5 text-blue-400" />
               </div>
               <input
                 id="confirm-password"
@@ -133,7 +133,7 @@ export default function Register() {
                 required
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}
-                className="pl-10 block w-full px-3 py-2 border border-gray-200 rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-300 focus:border-transparent transition duration-200 sm:text-base"
+                className="pl-10 block w-full px-3 py-2 border border-gray-200 rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:border-transparent transition duration-200 sm:text-base"
                 placeholder="Confirm Password"
               />
             </div>
@@ -144,7 +144,7 @@ export default function Register() {
             <button
               type="submit"
               disabled={loading}
-              className={`w-full flex justify-center py-2.5 px-4 border border-transparent text-base font-medium rounded-lg text-white bg-green-500 hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-400 transition duration-200 ${loading ? 'opacity-70 cursor-not-allowed' : 'shadow-md'}`}
+              className={`w-full flex justify-center py-2.5 px-4 border border-transparent text-base font-medium rounded-lg text-white bg-blue-500 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-400 transition duration-200 ${loading ? 'opacity-70 cursor-not-allowed' : 'shadow-md'}`}
             >
               {loading ? 'Creating account...' : 'Create Account'}
             </button>

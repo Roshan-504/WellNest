@@ -8,7 +8,6 @@ const SessionSchema = new mongoose.Schema({
   },
   title: {
     type: String,
-    required: true,
     trim: true
   },
   description: {
@@ -17,7 +16,6 @@ const SessionSchema = new mongoose.Schema({
   },
   youtube_url: {
     type: String,
-    required: true,
     trim: true
   },
   tags: {
@@ -38,15 +36,16 @@ const SessionSchema = new mongoose.Schema({
     min: 0,
     default: 0
   },
+  // NEW: Array to store IDs of users who liked this session
+  likedBy: {
+    type: [mongoose.Schema.Types.ObjectId],
+    ref: "User", // Assuming you have a 'User' model
+    default: []
+  },
 },{
-  timestamps: true
+  timestamps: true // This will automatically add createdAt and updatedAt
 });
 
-// Automatically update updated_at on save
-SessionSchema.pre("save", function (next) {
-  this.updated_at = Date.now();
-  next();
-});
 
 const Session = mongoose.model("Session", SessionSchema);
 

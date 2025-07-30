@@ -1,5 +1,5 @@
 import express from 'express';
-import { register, login } from '../controllers/authController.js';
+import { register, login, changePassword } from '../controllers/authController.js';
 import { authenticate } from '../middlewares/auth.js';
 import { use } from 'react';
 
@@ -19,5 +19,8 @@ router.get('/verify', authenticate, (req, res) => {
     email: req.user.email
   }});
 });
+
+router.post('/change-password', authenticate, changePassword);
+
 
 export default router;

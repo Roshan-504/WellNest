@@ -18,6 +18,13 @@
 }
 
 
+@tailwind utilities;
+
+/* Add Inter font globally */
+body {
+  font-family: 'Inter', sans-serif;
+}
+
 
 
 /* Custom scrollbar for sidebar */

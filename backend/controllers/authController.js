@@ -80,3 +80,50 @@ export const login = async (req, res) => {
     res.status(500).json({ message: 'Login failed' });
   }
 };
+
+
+export const changePassword = async (req, res) => {
+    const { currentPassword, newPassword } = req.body;
+
+    // 1. Basic validation
+    if (!currentPassword || !newPassword) {
+        return res.status(400).json({ message: 'Please provide current password and new password.' });
+    }
+
+    if (newPassword.length < 4) {
+        return res.status(400).json({ message: 'New password must be at least 4 characters long.' });
+    }
+
+    try {
+        // req.user will come from your authentication middleware (e.g., JWT verification)
+        // It should contain the ID of the authenticated user
+        const user = await User.findById(req.user._id).select('+password'); // Select password field explicitly
+
+        if (!user) {
+            return res.status(404).json({ message: 'User not found.' });
+        }
+
+        // 2. Compare current password
+        const isMatch = await bcrypt.compare(currentPassword, user.password);
+
+        if (!isMatch) {
+            return res.status(401).json({ message: 'Current password is incorrect.' });
+        }
+
+        // 3. Check if new password is the same as current password
+        if (newPassword === currentPassword) {
+            return res.status(400).json({ message: 'New password cannot be the same as the current password.' });
+        }
+
+        // 4. Hash the new password and save
+        const salt = await bcrypt.genSalt(10);
+        user.password = await bcrypt.hash(newPassword, salt); // Hash with a salt round of 10
+        await user.save();
+
+        res.status(200).json({ message: 'Password changed successfully!' });
+
+    } catch (error) {
+        console.error('Error changing password:', error);
+        res.status(500).json({ message: 'Server error. Could not change password.' });
+    }
+};

@@ -3,11 +3,11 @@ node_modules/
 **/node_modules/
 
 # Environment Variables
-# .env
-# .env.local
-# .env.development
-# .env.test
-# .env.production
+.env
+.env.local
+.env.development
+.env.test
+.env.production
 
 # Build artifacts
 build/

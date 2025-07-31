@@ -108,8 +108,8 @@ Follow these steps to set up and run the project locally.
 
 1.  **Clone the repository:**
     ```bash
-    git clone <your-repo-url>
-    cd <your-repo-name>/backend
+    git clone https://github.com/Roshan-504/WellNest.git
+    cd WellNest/backend
     ```
 2.  **Install dependencies:**
     ```bash
@@ -132,9 +132,9 @@ Follow these steps to set up and run the project locally.
 
 ### Frontend Setup
 
-1.  **Open new terminal and Navigate to the frontend directory:**
+1.  **Open a new terminal and Navigate to the frontend directory:**
     ```bash
-    cd <your-repo-name>/frontend 
+    cd WellNest/frontend 
     ```
 2.  **Install dependencies:**
     ```bash
@@ -152,7 +152,7 @@ Follow these steps to set up and run the project locally.
 
 -----
 
-## 6\. Database Schema
+## 5\. Database Schema
 
 ### User
 
@@ -192,8 +192,9 @@ Follow these steps to set up and run the project locally.
 }
 ```
 -----
+-----
 
-## 📸 Screenshots
+## 6\. 📸 Screenshots
 
 ### 📝 Register Page
 ![Register](./screenshots/Register.png)

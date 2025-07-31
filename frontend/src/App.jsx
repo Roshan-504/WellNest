@@ -7,8 +7,6 @@ import ProtectedRoute from './components/ProtectedRoute'
 import useAuthStore from './stores/authStore'
 import { useEffect } from 'react'
 import toast, { Toaster } from 'react-hot-toast'
-import MySessionsPage from './pages/MySessionsPage';
-import EditSessionPage from './pages/EditSessionsPage';
 import SessionDetailPage from './pages/SessionDetailPage'
 import ProfileSettingsPage from './pages/ProfileSettingsPage'
 

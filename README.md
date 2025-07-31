@@ -15,13 +15,13 @@ WellNest is a full-stack application designed to be a secure platform for wellne
 
 ## 🚀 Live Demo
 
-- **Vercel:** [WellNest App](https://wellnest-kappa.vercel.app/login)
+- **Vercel Live Website Link :** [WellNest App](https://wellnest-kappa.vercel.app/login)
 
 ---
 
 ## ⚠️ Note About Backend (Render)
 
-> The backend is hosted on **Render**, which **sleeps after 15 minutes of inactivity** on the free plan.
+ The backend is hosted on **Render**, which **sleeps after 15 minutes of inactivity** on the free plan.
 
 - If you see errors like _"Failed to fetch"_ or _server unavailable_, it's likely because the backend is waking up.
 - **Please wait 1–2 minutes and try again.**

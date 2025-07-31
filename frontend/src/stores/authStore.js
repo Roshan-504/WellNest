@@ -13,7 +13,6 @@ const useAuthStore = create((set) => ({
   logout: () => {
     set({ user: null, token: null, isLoading: false })
     localStorage.removeItem('token')
-    toast.success('Logged out successfully!')
   },
   initializeAuth: async () => {
     set({ isLoading: true })

@@ -1,4 +1,3 @@
-// pages/SessionDetailPage.jsx
 
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
@@ -129,7 +128,15 @@ const SessionDetailPage = () => {
                     {/* 1. Image (or Placeholder if no image) */}
                     <div className="relative w-full h-80 bg-gray-200 overflow-hidden">
                         {session.imageUrl ? (
-                            <img src={session.imageUrl} alt={session.title} className="w-full h-full object-cover" />
+                            <img
+                            src={session.imageUrl}
+                            alt={session.title}
+                            className="w-full h-full object-cover"
+                            onError={(e) => {
+                                e.target.onerror = null;
+                                e.target.src = "https://flimp.net/wp-content/uploads/2024/06/Why-Employee-Wellness-Is-Good-for-Business-Benefits-and-ROI.png";
+                            }}
+                            />
                         ) : (
                             <div className="w-full h-full flex items-center justify-center text-gray-400 text-lg bg-gray-200">
                                 No Image Available

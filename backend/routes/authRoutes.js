@@ -1,7 +1,6 @@
 import express from 'express';
 import { register, login, changePassword } from '../controllers/authController.js';
 import { authenticate } from '../middlewares/auth.js';
-import { use } from 'react';
 
 const router = express.Router();
 
